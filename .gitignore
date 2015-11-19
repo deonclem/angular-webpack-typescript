@@ -4,3 +4,4 @@ build/
 dist/
 *.idea
 npm-debug.log
+bundle.js*
