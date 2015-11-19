@@ -43,6 +43,14 @@ var config = {
                 loader:'style!css!stylus'
             }
         ]
+    },
+    devServer: {
+      proxy: {
+        '/api*': {
+          target: 'http://localhost:8081',
+          secure: false
+        }
+      }
     }
 };
 
