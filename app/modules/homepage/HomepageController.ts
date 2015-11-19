@@ -3,7 +3,7 @@
  * - display a <hello world> message
  */
 export class HomepageController {
-    private helloWorld: string;
+    public helloWorld: string;
 
     constructor(){
         this.helloWorld = 'Hello World !';

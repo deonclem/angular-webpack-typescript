@@ -4,7 +4,6 @@ var config = {
     context: __dirname,
     entry: './index.ts',
     output: {
-        path: __dirname + '/app',
         filename: 'bundle.js'
     },
     plugins: [
@@ -28,7 +27,8 @@ var config = {
             },
             {
                 test: /\.js$/,
-                loader:'ng-annotate!babel'
+                loader:'ng-annotate!babel',
+                exclude: /node_modules/
             },
             {
                 test: /\.html$/,
@@ -47,8 +47,8 @@ var config = {
 };
 
 if(process.env.NODE_ENV === 'production'){
-    config.output.path = __dirname + '/dist';
-    config.plugins.push(new webpack.optimize.UglifyJsPlugin());
+  config.output.path = __dirname + '/dist';
+  config.plugins.push(new webpack.optimize.UglifyJsPlugin());
 }
 
 module.exports = config;
