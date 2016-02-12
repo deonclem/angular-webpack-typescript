@@ -13,4 +13,4 @@ This repository contains a basic app running using Angular 1.5, Typescript 1.8 a
 
 ## Misc
 
-This also uses [angular-material](https://github.com/angular/material) 0.11.4 and [angular-ui-router](https://github.com/angular-ui/ui-router) 0.2.15
+This also uses [angular-material](https://github.com/angular/material) 1.0.5 and [angular-ui-router](https://github.com/angular-ui/ui-router) 0.2.15
