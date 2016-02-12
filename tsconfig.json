@@ -5,6 +5,6 @@
   },
   "files": [
     "index.ts",
-    "typings/tsd.d.ts"
+    "typings/main.d.ts"
   ]
 }

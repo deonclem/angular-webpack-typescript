@@ -1,0 +1,11 @@
+{
+  "name": "angular-webpack",
+  "ambientDependencies": {
+    "jquery": "github:DefinitelyTyped/DefinitelyTyped/jquery/jquery.d.ts#90ed8bf856c91e916cf899477b54443273889386",
+    "angular": "github:DefinitelyTyped/DefinitelyTyped/angularjs/angular.d.ts#90ed8bf856c91e916cf899477b54443273889386",
+    "angular-ui-router": "github:DefinitelyTyped/DefinitelyTyped/angular-ui-router/angular-ui-router.d.ts#c560ba6f0f55ce6f50e9d06e37b5bc0e2b9117b0",
+    "angular-material": "github:DefinitelyTyped/DefinitelyTyped/angular-material/angular-material.d.ts#fc341765ebbb04b7109981a25dced01f488f4d94",
+    "angular-mocks": "github:DefinitelyTyped/DefinitelyTyped/angularjs/angular-mocks.d.ts#90ed8bf856c91e916cf899477b54443273889386",
+    "jasmine": "github:DefinitelyTyped/DefinitelyTyped/jasmine/jasmine.d.ts#90ed8bf856c91e916cf899477b54443273889386"
+  }
+}
