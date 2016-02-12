@@ -1,4 +1,4 @@
-Angular 1.4 - Typescript - Webpack starter pack
+Angular 1.5 - Typescript - Webpack starter pack
 ===============================================
 
 This repository contains a basic app running using Angular 1.5, Typescript 1.8 and Webpack 1.12.2
