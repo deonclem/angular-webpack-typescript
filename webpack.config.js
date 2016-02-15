@@ -56,10 +56,7 @@ var config = {
     }
 };
 
-if(process.env.NODE_ENV === 'production'){
-  // Changing the output path to /dist
-  config.output.path = __dirname + '/dist';
-
+if(process.env.NODE_ENV !== 'test'){
   // split the production into 2 chunks, the app and the vendor code
   config.plugins.push(
     new SplitByNamePlugin({
@@ -71,6 +68,11 @@ if(process.env.NODE_ENV === 'production'){
         regex: /app/
       }]
     }));
+}
+
+if(process.env.NODE_ENV === 'production'){
+  // Changing the output path to /dist
+  config.output.path = __dirname + '/dist';
 
   // uglify the app code
   config.plugins.push(new webpack.optimize.UglifyJsPlugin({

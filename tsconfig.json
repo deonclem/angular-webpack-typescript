@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
     "target": "es6",
-    "sourceMap": true
+    "sourceMap": true,
+    "experimentalDecorators": true
   },
   "files": [
     "index.ts",
