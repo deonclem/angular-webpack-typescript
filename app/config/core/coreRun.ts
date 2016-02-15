@@ -3,6 +3,7 @@ export interface CustomRootScope extends ng.IRootScopeService {
 }
 
 export function run($rootScope: CustomRootScope, $log: ng.ILogService) {
+    "ngInject"; //needed when directly exporting a class or function
 
     $rootScope.$on("$stateChangeStart", () => {
         $rootScope.changingState = true;

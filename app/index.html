@@ -6,7 +6,9 @@
     <base href="/">
 </head>
 <body data-ng-app="app">
-    <div data-ui-view></div>
-    <script src="bundle.js"></script>
+    <div data-ui-view data-ng-strict-di></div>
+    <script src="vendor.js"></script> <!--External Libs-->
+    <script src="app.js"></script> <!--The app code-->
+    <script src="main.js"></script> <!--Kicktarts the app-->
 </body>
 </html>

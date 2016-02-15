@@ -26,6 +26,7 @@
     "mocha": "^2.3.3",
     "ng-annotate-loader": "^0.1.0",
     "raw-loader": "^0.5.1",
+    "split-by-name-webpack-plugin": "0.0.3",
     "style-loader": "^0.13.0",
     "stylus-loader": "^1.4.0",
     "ts-loader": "^0.8.1",
@@ -38,8 +39,8 @@
     "test": "NODE_ENV=test karma start",
     "start": "npm install && node_modules/.bin/typings install && npm run-script dev",
     "dev": "node node_modules/.bin/webpack-dev-server --content-base app",
-    "build": "NODE_ENV=production node node_modules/.bin/webpack && cp app/index.html dist/index.html",
-    "dist": "NODE_ENV=production node node_modules/.bin/webpack && cp app/index.html dist/index.html && node node_modules/.bin/webpack-dev-server --content-base dist"
+    "build": "rm -rf dist/ && NODE_ENV=production node node_modules/.bin/webpack && cp app/index.html dist/index.html",
+    "dist": "rm -rf dist/ && NODE_ENV=production node node_modules/.bin/webpack && cp app/index.html dist/index.html && NODE_ENV=production  node node_modules/.bin/webpack-dev-server --content-base dist"
   },
   "author": "",
   "license": "ISC"

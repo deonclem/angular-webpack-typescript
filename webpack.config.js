@@ -1,10 +1,12 @@
 var webpack = require('webpack');
+var SplitByNamePlugin = require('split-by-name-webpack-plugin');
 
 var config = {
     context: __dirname,
     entry: './index.ts',
     output: {
-        filename: 'bundle.js'
+        filename: "[name].js",
+        chunkFilename: "[name].js"
     },
     plugins: [
         new webpack.DefinePlugin({
@@ -13,7 +15,6 @@ var config = {
         new webpack.DefinePlugin({
             ON_TEST: process.env.NODE_ENV === 'test'
         })
-
     ],
     devtool: 'source-map',
     resolve: {
@@ -23,7 +24,8 @@ var config = {
         loaders: [
             {
                 test: /\.ts$/,
-                loader:'ng-annotate!babel!ts'
+                loader:'ng-annotate!babel!ts',
+                exclude: /node_modules/
             },
             {
                 test: /\.js$/,
@@ -55,8 +57,28 @@ var config = {
 };
 
 if(process.env.NODE_ENV === 'production'){
+  // Changing the output path to /dist
   config.output.path = __dirname + '/dist';
-  config.plugins.push(new webpack.optimize.UglifyJsPlugin());
+
+  // split the production into 2 chunks, the app and the vendor code
+  config.plugins.push(
+    new SplitByNamePlugin({
+      buckets: [{
+        name: 'vendor',
+        regex: /node_modules/
+      }, {
+        name: 'app',
+        regex: /app/
+      }]
+    }));
+
+  // uglify the app code
+  config.plugins.push(new webpack.optimize.UglifyJsPlugin({
+    exclude: [
+      'vendor.js'
+    ],
+    compress: {warnings: false}
+  }));
 }
 
 module.exports = config;
