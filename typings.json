@@ -2,10 +2,10 @@
   "name": "angular-webpack",
   "ambientDependencies": {
     "jquery": "github:DefinitelyTyped/DefinitelyTyped/jquery/jquery.d.ts#90ed8bf856c91e916cf899477b54443273889386",
-    "angular": "github:DefinitelyTyped/DefinitelyTyped/angularjs/angular.d.ts#90ed8bf856c91e916cf899477b54443273889386",
-    "angular-ui-router": "github:DefinitelyTyped/DefinitelyTyped/angular-ui-router/angular-ui-router.d.ts#c560ba6f0f55ce6f50e9d06e37b5bc0e2b9117b0",
-    "angular-material": "github:DefinitelyTyped/DefinitelyTyped/angular-material/angular-material.d.ts#fc341765ebbb04b7109981a25dced01f488f4d94",
-    "angular-mocks": "github:DefinitelyTyped/DefinitelyTyped/angularjs/angular-mocks.d.ts#90ed8bf856c91e916cf899477b54443273889386",
+    "angular": "github:DefinitelyTyped/DefinitelyTyped/angularjs/angular.d.ts#17ef40452039d19e06dc2a3815ea898c505860fa",
+    "angular-ui-router": "github:DefinitelyTyped/DefinitelyTyped/angular-ui-router/angular-ui-router.d.ts#655f8c1bf3c71b0e1ba415b36309604f79326ac8",
+    "angular-material": "github:DefinitelyTyped/DefinitelyTyped/angular-material/angular-material.d.ts#2d0a1b1502610025bd55ce8eaa48069da8a16c82",
+    "angular-mocks": "github:DefinitelyTyped/DefinitelyTyped/angularjs/angular-mocks.d.ts#77dd2668f85730372aa8e62152e652048e8b6b87",
     "jasmine": "github:DefinitelyTyped/DefinitelyTyped/jasmine/jasmine.d.ts#90ed8bf856c91e916cf899477b54443273889386"
   }
 }
