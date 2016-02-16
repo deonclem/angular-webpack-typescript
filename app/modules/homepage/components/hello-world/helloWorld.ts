@@ -1,5 +1,3 @@
-import {component} from "./../../../../decorators/component";
-
 // Directive stylesheet
 import './hello-world.styl';
 
@@ -8,7 +6,6 @@ interface HelloWorldComponentScope extends ng.IScope
     HelloWorld: any
 }
 
-@component()
 export class HelloWorldComponent implements ng.IComponentOptions {
 
     public template:string = require('./hello-world.html');
