@@ -8,7 +8,7 @@ interface HelloWorldComponentScope extends ng.IScope
 
 export class HelloWorldComponent implements ng.IComponentOptions {
 
-    public template:string = require('./hello-world.html');
+    public template:string = <string>require('./hello-world.html');
     public restrict:string = "E";
     public bindings:Object = {
         message: "="

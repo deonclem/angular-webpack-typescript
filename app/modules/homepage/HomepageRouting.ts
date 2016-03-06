@@ -11,7 +11,7 @@ export function config($stateProvider: ng.ui.IStateProvider): void {
         url: '/',
         views: {
             "@": {
-                template: require('./homepage.html'),
+                template: <string>require('./homepage.html'),
                 controller: 'HomepageController',
                 controllerAs: 'Home'
             }
