@@ -3,12 +3,6 @@
  */
 
 /**
- * External deps (optionnal)
- */
-import 'angular';
-require('ui-router/release/angular-ui-router');
-
-/**
  * Internal deps
  */
 import {HomepageController} from './HomepageController'
@@ -18,7 +12,7 @@ import {HelloWorldComponent} from './components/hello-world/helloWorld'
 /**
  * Stylesheet
  */
-import "./homepage.styl";
+import "./homepage.scss";
 
 angular.module('app.homepage', ["ui.router"])
     .config(HomepageRouting)

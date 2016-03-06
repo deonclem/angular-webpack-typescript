@@ -1,5 +1,5 @@
 // Directive stylesheet
-import './hello-world.styl';
+import './hello-world.scss';
 
 interface HelloWorldComponentScope extends ng.IScope
 {

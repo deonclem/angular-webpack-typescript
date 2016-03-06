@@ -5,7 +5,7 @@
  */
 import 'angular';
 import 'angular-material';
-require('ui-router/release/angular-ui-router'); // AFAIK ui-router doesn't support the import syntax with typescript
+import 'angular-ui-router';
 
 /**
  * Importing external stylesheets
