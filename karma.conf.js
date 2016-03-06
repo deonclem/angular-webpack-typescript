@@ -1,9 +1,6 @@
 'use strict';
 var path = require('path');
 var webpackConfig = require('./webpack.config');
-var entry = path.resolve(webpackConfig.context, webpackConfig.entry);
-var preprocessors = {};
-preprocessors[entry] = ['webpack'];
 module.exports = function karmaConfig(config) {
   config.set({
     frameworks: [
@@ -17,11 +14,13 @@ module.exports = function karmaConfig(config) {
       // Output code coverage files
       //'coverage'
     ],
-    files: [entry],
-    preprocessors: preprocessors,
+    files: ['**/*.spec.ts'],
+    preprocessors: {
+      '**/*.spec.ts': ['webpack']
+    },
     browsers: [
       // Run tests using PhantomJS
-      'PhantomJS2'
+      'PhantomJS'
     ],
     singleRun: true,
     webpack: webpackConfig,
@@ -29,7 +28,7 @@ module.exports = function karmaConfig(config) {
       require('karma-webpack'),
       require('karma-jasmine'),
       require('karma-spec-reporter'),
-      require('karma-phantomjs2-launcher'),
+      require('karma-phantomjs-launcher'),
       require('karma-typescript-preprocessor')
     ],
     typescriptPreprocessor: {

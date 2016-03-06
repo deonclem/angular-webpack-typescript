@@ -20,14 +20,6 @@ import {run} from './config/core/coreRun'
 import './modules/homepage/index';
 
 /**
- * Require tests if testing
- * (Using require as 'import' is only usable at the top level
- */
-if(ON_TEST === true){
-    require('./modules/homepage/Homepage.spec.ts');
-}
-
-/**
  * The main app module.
  */
 
