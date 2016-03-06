@@ -18,6 +18,7 @@ import 'angular-material/angular-material.css';
 import {config} from './config/core/coreConfig'
 import {run} from './config/core/coreRun'
 import './modules/homepage/index';
+import './services/index';
 
 /**
  * The main app module.
@@ -28,6 +29,7 @@ module app {
         .module('app', [
             "ui.router",
             "ngMaterial",
+            "app.services",
             "app.homepage"
         ])
         .config(config)

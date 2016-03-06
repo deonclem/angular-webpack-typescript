@@ -16,5 +16,5 @@ import "./homepage.scss";
 
 angular.module('app.homepage', ["ui.router"])
     .config(HomepageRouting)
-    .controller('HomepageController', () => new HomepageController())
+    .controller('HomepageController', HomepageController)
     .component('helloWorld', new HelloWorldComponent());
