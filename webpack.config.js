@@ -45,6 +45,10 @@ var config = {
       {
         test: /\.scss/,
         loader:'style!css!postcss!sass'
+      },
+      {
+        test: /\.(jpg|png|svg|ico|ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: "file?name=[path][name].[ext]?[hash]"
       }
     ]
   },
