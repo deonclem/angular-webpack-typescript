@@ -46,8 +46,8 @@
     "test": "NODE_ENV=test karma start",
     "start": "npm install && node_modules/.bin/typings install && npm run-script dev",
     "dev": "node node_modules/.bin/webpack-dev-server --content-base app",
-    "build": "rm -rf dist/ && NODE_ENV=production node node_modules/.bin/webpack && cp app/index.html dist/index.html",
-    "dist": "rm -rf dist/ && NODE_ENV=production node node_modules/.bin/webpack && cp app/index.html dist/index.html && NODE_ENV=production  node node_modules/.bin/webpack-dev-server --content-base dist"
+    "build": "npm test && rm -rf dist/ && NODE_ENV=production node node_modules/.bin/webpack --bail && cp app/index.html dist/index.html",
+    "dist": "npm test && rm -rf dist/ && NODE_ENV=production node node_modules/.bin/webpack --bail && cp app/index.html dist/index.html && NODE_ENV=production  node node_modules/.bin/webpack-dev-server --content-base dist"
   },
   "author": "",
   "license": "ISC"
