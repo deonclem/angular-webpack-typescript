@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Angular with webpack</title>
+    <link rel="stylesheet" type="text/css" href="app.css">
     <base href="/">
 </head>
 <body data-ng-app="app">
     <div data-ui-view data-ng-strict-di></div>
-    <script src="vendor.js"></script> <!--External Libs-->
-    <script src="app.js"></script> <!--The app code-->
-    <script src="main.js"></script> <!--Kicktarts the app-->
+    <script src="main.js"></script> <!--Contains both the app & vendor code-->
 </body>
 </html>

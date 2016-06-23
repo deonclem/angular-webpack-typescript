@@ -1,7 +1,11 @@
 var webpack = require('webpack');
-var SplitByNamePlugin = require('split-by-name-webpack-plugin');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var autoprefixer = require('autoprefixer');
 var precss       = require('precss');
+
+const extractCSS = new ExtractTextPlugin("app.css", {
+  allChunks: true
+});
 
 var config = {
   context: __dirname,
@@ -16,9 +20,10 @@ var config = {
     }),
     new webpack.DefinePlugin({
       ON_TEST: process.env.NODE_ENV === 'test'
-    })
+    }),
+    extractCSS
   ],
-  devtool: 'devtool',
+  devtool: 'eval',
   resolve: {
     extensions: ['', '.webpack.js', '.web.js', '.ts', '.js']
   },
@@ -40,11 +45,11 @@ var config = {
       },
       {
         test: /\.css$/,
-        loader:'style!css!postcss'
+        loader: extractCSS.extract(["css?minimize"])
       },
       {
         test: /\.scss/,
-        loader:'style!css!postcss!sass'
+        loader: extractCSS.extract(["css?minimize!postcss!sass"])
       },
       {
         test: /\.(gif|jpeg|jpg|png|svg|ico|ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
@@ -64,20 +69,6 @@ var config = {
     }
   }
 };
-
-if(process.env.NODE_ENV !== 'test'){
-  // split the production into 2 chunks, the app and the vendor code
-  config.plugins.push(
-    new SplitByNamePlugin({
-      buckets: [{
-        name: 'vendor',
-        regex: /node_modules/
-      }, {
-        name: 'app',
-        regex: /app/
-      }]
-    }));
-}
 
 if(process.env.NODE_ENV === 'production'){
   // Changing the output path to /dist
