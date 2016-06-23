@@ -5,7 +5,7 @@ This repository contains a basic app running using Angular 1.5, Typescript 1.8 a
 
 ## Usage
 
-* Run `npm start` to install all the dependencies (npm + tsd) and start a local dev server
+* Run `npm start` to install all the dependencies (npm + typings) and start a local dev server
 * Run `npm build` to build a production distrib of your app
 * Run `npm run dev` to start a local dev server
 * Run `npm run dist` to build a production distrib of your app and serve it with a local server

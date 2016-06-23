@@ -1,6 +1,6 @@
 {
   "name": "angular-webpack",
-  "ambientDependencies": {
+  "globalDependencies": {
     "angular": "github:DefinitelyTyped/DefinitelyTyped/angularjs/angular.d.ts#17ef40452039d19e06dc2a3815ea898c505860fa",
     "angular-material": "github:DefinitelyTyped/DefinitelyTyped/angular-material/angular-material.d.ts#2d0a1b1502610025bd55ce8eaa48069da8a16c82",
     "angular-mocks": "github:DefinitelyTyped/DefinitelyTyped/angularjs/angular-mocks.d.ts#77dd2668f85730372aa8e62152e652048e8b6b87",
