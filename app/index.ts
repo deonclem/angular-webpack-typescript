@@ -19,8 +19,8 @@ import 'angular-material/angular-material.css';
  */
 import {config} from './config/core/coreConfig'
 import {run} from './config/core/coreRun'
-import './modules/homepage/index';
-import './services/index';
+import './modules';
+import './services';
 
 /**
  * Importing the app images
@@ -37,7 +37,7 @@ module app {
             "ui.router",
             "ngMaterial",
             "app.services",
-            "app.homepage"
+            "app.modules"
         ])
         .config(config)
         .run(run);
