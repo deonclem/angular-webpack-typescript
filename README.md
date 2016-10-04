@@ -1,7 +1,7 @@
 Angular 1.5 - Typescript - Webpack starter pack
 ===============================================
 
-This repository contains a basic app running using Angular 1.5, Typescript 1.8 and Webpack 1.12.2
+This repository contains a basic app running using Angular 1.5.8, Typescript 1.8 and Webpack 1.13.1
 
 ## Usage
 
@@ -13,4 +13,4 @@ This repository contains a basic app running using Angular 1.5, Typescript 1.8 a
 
 ## Misc
 
-This also uses [angular-material](https://github.com/angular/material) 1.0.9 and [angular-ui-router](https://github.com/angular-ui/ui-router) 0.3.1
+This also uses [angular-material](https://github.com/angular/material) 1.1.1 and [angular-ui-router](https://github.com/angular-ui/ui-router) 0.3.1
