@@ -23,6 +23,11 @@ import './modules/homepage/index';
 import './services/index';
 
 /**
+ * Importing the app images
+ */
+require.context('./assets/img', true, /^\.\//);
+
+/**
  * The main app module.
  */
 
