@@ -1,12 +1,25 @@
-<div class="homepage" data-layout="row" data-layout-align="start center">
+<div class="homepage" data-layout="row">
     <div>
         <img src="app/assets/img/webpackAngular.png" alt="Webpack - Angular Logo">
     </div>
     <div data-layout="column" data-layout-padding>
         <h1>{{Home.helloWorld}}</h1>
+        <h2>Examples</h2>
+        <hr>
+        <h3>Component</h3>
         <hello-world message="Home.componentMessage"></hello-world>
+        <hr>
+        <h3>Filter</h3>
         <div>
             {{"a FilTer Has beEn ApplIed On me" | capitalize:true:true}}
+        </div>
+        <hr>
+        <h3>Method from Class</h3>
+        <div>
+            Min Value : {{Home.minValue}}
+        </div>
+        <div>
+            Max Value : {{Home.maxValue}}
         </div>
     </div>
 </div>
