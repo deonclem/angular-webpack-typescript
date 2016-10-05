@@ -62,7 +62,7 @@ var config = {
   },
   devServer: {
     proxy: {
-      '/api*': {
+	  '/api/**': {
         target: 'http://localhost:8081',
         secure: false
       }
