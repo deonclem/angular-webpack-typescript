@@ -5,7 +5,7 @@ import {HomepageController} from './HomepageController';
 import {HomeService} from "../../services/HomeService";
 
 describe("Homepage", () =>{
-    var $httpBackend: ng.IHttpBackendService,
+    let $httpBackend: ng.IHttpBackendService,
         $controller: ng.IControllerService,
         ctrl: HomepageController;
 

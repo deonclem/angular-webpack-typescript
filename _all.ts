@@ -3,5 +3,4 @@
 /// <reference path="app/config/core/coreRun.ts" />
 /// <reference path="app/modules/homepage/index.ts" />
 
-declare var ON_PROD: boolean;
-declare var ON_TEST: boolean;
+declare let ON_PROD: boolean;

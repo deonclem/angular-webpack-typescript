@@ -32,15 +32,12 @@ require.context('./assets/img', true, /^\.\//);
  * The main app module.
  */
 
-module app {
-    angular
-        .module('app', [
-            "ui.router",
-            "ngMaterial",
-            "app.filters",
-            "app.services",
-            "app.modules"
-        ])
-        .config(config)
-        .run(run);
-}
+angular.module('app', [
+        "ui.router",
+        "ngMaterial",
+        "app.filters",
+        "app.services",
+        "app.modules"
+    ])
+    .config(config)
+    .run(run);

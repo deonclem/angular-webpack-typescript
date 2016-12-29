@@ -18,7 +18,7 @@ export class HelloWorldComponent implements ng.IComponentOptions {
     public controller:Function = ($scope: HelloWorldComponentScope):void => {
         'ngInject';
 
-        var ctrl = $scope.HelloWorld;
+        let ctrl = $scope.HelloWorld;
         ctrl.message2 = ", I'm a component.";
     };
 }
