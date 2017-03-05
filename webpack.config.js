@@ -63,6 +63,10 @@ module.exports = env => {
           target: 'http://localhost:8081',
           secure: false
         }
+      },
+      overlay: { // https://github.com/webpack/webpack-dev-server/pull/764
+        errors: true,
+        warning: true
       }
     }
   }
