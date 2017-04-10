@@ -10,12 +10,12 @@ export class HelloWorldComponent implements ng.IComponentOptions {
 
     public template:string = <string>require('./hello-world.html');
     public restrict:string = "E";
-    public bindings:Object = {
+    public bindings:{ [boundProperty: string]: string; } = {
         message: "="
     };
     public controllerAs:string = 'HelloWorld';
 
-    public controller:Function = ($scope: HelloWorldComponentScope):void => {
+    public controller = ($scope: HelloWorldComponentScope):void => {
         'ngInject';
 
         let ctrl = $scope.HelloWorld;

@@ -8,7 +8,7 @@ export function run($rootScope: CustomRootScope, $log: ng.ILogService) {
     $rootScope.$on("$stateChangeStart", () => {
         $rootScope.changingState = true;
     });
-
+    
     $rootScope.$on("$stateChangeSuccess", () => {
         $rootScope.changingState = false;
     });

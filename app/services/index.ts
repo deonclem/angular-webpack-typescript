@@ -1,11 +1,8 @@
-import 'angular';
-
 /**
  * App Services
  */
 
-import {HomeService} from './HomeService.ts';
-
+import {HomeService} from './HomeService';
 
 angular.module('app.services', [])
     .service('HomeService', HomeService);

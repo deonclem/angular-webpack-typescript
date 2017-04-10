@@ -1,4 +1,3 @@
-import IHttpPromise = angular.IHttpPromise;
 export class HomeService {
     private http:ng.IHttpService;
     private log:ng.ILogService;
