@@ -1,20 +1,18 @@
+import * as angular from 'angular';
+import 'angular-ui-router';
+
 /**
- * Homepage Component
+ * Homepage View
  */
 
 /**
  * Internal deps
  */
-import {HomepageController} from './HomepageController'
+import {HomepageComponent} from './homepage'
 import {config as HomepageRouting} from './HomepageRouting'
 import {HelloWorldComponent} from './components/hello-world/helloWorld'
 
-/**
- * Stylesheet
- */
-import "./homepage.scss";
-
-angular.module('app.homepage', ["ui.router"])
+angular.module('app.homepage', ['ui.router'])
     .config(HomepageRouting)
-    .controller('HomepageController', HomepageController)
+    .component('homepage', new HomepageComponent())
     .component('helloWorld', new HelloWorldComponent());

@@ -6,6 +6,7 @@
   },
   "files": [
     "index.ts",
-    "globals.d.ts"
+    "globals.d.ts",
+    "node_modules/ui-router-core/lib/index.d.ts"
   ]
 }

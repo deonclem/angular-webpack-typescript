@@ -1,6 +1,6 @@
 {
   "name": "angular-webpack",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Skeleton project using Angular 1.5.10, typescript and webpack",
   "main": "app/index.js",
   "repository": "https://github.com/deonclem/angular-webpack-typescript.git",
@@ -11,7 +11,7 @@
     "angular-i18n": "~1.5.10",
     "angular-material": "^1.1.3",
     "angular-messages": "~1.5.10",
-    "angular-ui-router": "^0.4.2"
+    "angular-ui-router": "~1.0.0-rc.1"
   },
   "devDependencies": {
     "@types/angular": "^1.5.23",
@@ -51,9 +51,9 @@
   "scripts": {
     "test": "karma start",
     "start": "npm install && npm run-script dev",
-    "dev": "node node_modules/.bin/webpack-dev-server --env.dev --content-base app --host 0.0.0.0",
+    "dev": "node node_modules/.bin/webpack-dev-server --env.dev --content-base app --host 0.0.0.0 --no-inline",
     "build": "npm test && rm -rf dist/ && node node_modules/.bin/webpack --env.prod -p && cp app/index.html dist/index.html",
-    "dist": "npm test && rm -rf dist/ && node node_modules/.bin/webpack --env.prod -p && cp app/index.html dist/index.html && node node_modules/.bin/webpack-dev-server --env.prod -p --compress --content-base dist --host 0.0.0.0"
+    "dist": "npm test && rm -rf dist/ && node node_modules/.bin/webpack --env.prod -p && cp app/index.html dist/index.html && node node_modules/.bin/webpack-dev-server --env.prod -p --compress --content-base dist --host 0.0.0.0 --no-inline"
   },
   "author": "deonclem",
   "license": "ISC"

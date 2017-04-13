@@ -1,3 +1,5 @@
+import * as angular from 'angular';
+
 /**
  * Importing external libs
  */
@@ -18,7 +20,7 @@ import 'angular-material/angular-material.css';
 import {config} from './config/core/coreConfig'
 import {run} from './config/core/coreRun'
 import './filters';
-import './modules';
+import './views';
 import './services';
 
 /**
@@ -35,7 +37,7 @@ angular.module('app', [
         "ngMaterial",
         "app.filters",
         "app.services",
-        "app.modules"
+        "app.views"
     ])
     .config(config)
     .run(run);

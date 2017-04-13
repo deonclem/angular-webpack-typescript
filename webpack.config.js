@@ -52,7 +52,7 @@ module.exports = env => {
           loader: extractCSS.extract("css-loader?importLoaders=1!postcss-loader!sass-loader")
         },
         {
-          test: /\.(gif|jpeg|jpg|png|svg|ico|ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+          test: /\.(gif|jpeg|jpg|png|ico|ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
           loader: "file-loader?name=[path][name].[ext]?[hash]"
         }
       ]

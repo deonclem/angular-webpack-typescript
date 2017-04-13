@@ -1,3 +1,5 @@
+import * as ng from 'angular';
+
 // Directive stylesheet
 import './hello-world.scss';
 
@@ -9,9 +11,8 @@ interface HelloWorldComponentScope extends ng.IScope
 export class HelloWorldComponent implements ng.IComponentOptions {
 
     public template:string = <string>require('./hello-world.html');
-    public restrict:string = "E";
     public bindings:{ [boundProperty: string]: string; } = {
-        message: "="
+        message: "<"
     };
     public controllerAs:string = 'HelloWorld';
 

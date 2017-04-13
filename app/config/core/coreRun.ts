@@ -1,22 +1,16 @@
+import {TransitionService} from "../../../node_modules/ui-router-core/lib/index";
+
 export interface CustomRootScope extends ng.IRootScopeService {
     changingState: boolean
 }
 
-export function run($rootScope: CustomRootScope, $log: ng.ILogService) {
+export function run($transitions: TransitionService, $rootScope: CustomRootScope) {
     "ngInject"; //needed when directly exporting a class or function
-
-    $rootScope.$on("$stateChangeStart", () => {
-        $rootScope.changingState = true;
-    });
     
-    $rootScope.$on("$stateChangeSuccess", () => {
-        $rootScope.changingState = false;
+    $transitions.onStart({}, function(trans: any) {
+        $rootScope.changingState = true;
+        trans.promise.finally(() => $rootScope.changingState = false);
     });
-
-    $rootScope.$on("$stateChangeError", (event, toState, toParams, fromState, fromParams, error) => {
-        $rootScope.changingState = false;
-        $log.error("State change error: ", error);
-    })
 }
 
 export default run;

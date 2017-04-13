@@ -1,6 +1,5 @@
 'use strict';
 
-const path = require('path');
 const webpackConfig = require('./webpack.config.js')({});
 
 module.exports = function karmaConfig(config) {
@@ -16,7 +15,11 @@ module.exports = function karmaConfig(config) {
       // Output code coverage files
       //'coverage'
     ],
-    files: ['**/*.spec.ts'],
+    files: [
+      'node_modules/angular/angular.js',
+      'node_modules/angular-mocks/angular-mocks.js',
+      '**/*.spec.ts'
+    ],
     preprocessors: {
       '**/*.spec.ts': ['webpack']
     },

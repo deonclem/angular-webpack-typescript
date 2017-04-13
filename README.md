@@ -13,4 +13,10 @@ This repository contains a basic app running using Angular 1.5.10, Typescript 2.
 
 ## Misc
 
-This also uses [angular-material](https://github.com/angular/material) 1.1.3 and [angular-ui-router](https://github.com/angular-ui/ui-router) 0.3.2
+This also uses [angular-material](https://github.com/angular/material) 1.1.3 and [angular-ui-router](https://github.com/angular-ui/ui-router) 1.0.0-rc1
+
+## Next steps
+
+* Add Lazy loading
+* Hot reloading of CSS
+* Bump Angular to 1.6 (waiting for angular-material)
