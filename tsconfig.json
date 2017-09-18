@@ -2,11 +2,11 @@
   "compilerOptions": {
     "target": "es6",
     "sourceMap": true,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "baseUrl": "./node_modules"
   },
   "files": [
     "index.ts",
-    "globals.d.ts",
-    "node_modules/ui-router-core/lib/index.d.ts"
+    "globals.d.ts"
   ]
 }

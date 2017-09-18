@@ -1,45 +1,44 @@
 import {Utils} from "../../models/Utils";
 import "./homepage.scss";
 
-interface HomepageComponentScope extends ng.IScope
-{
-    Homepage: any
-}
-
-export class HomepageComponent implements ng.IComponentOptions {
+export const HomepageComponent: ng.IComponentOptions = {
     
-    public template:string = <string>require('./homepage.html');
-    public bindings:{ [boundProperty: string]: string; } = {
-        helloWorld: "<"
-    };
-    public controllerAs:string = 'Homepage';
+    // Bindings will get automatically bound to "this" in the controller.
+    bindings: {
+        helloWorld: '<'
+    },
     
-    public controller = ($scope: HomepageComponentScope):void => {
-        'ngInject';
+    controller: function() {
         
-        let ctrl = $scope.Homepage;
-        ctrl.resolvedMessage = ctrl.helloWorld.message;
-        ctrl.componentMessage = 'Hello';
-    
-        let object = [
-            {
-                val: 2
-            },
-            {
-                val: 7
-            },
-            {
-                val: 1
-            },
-            {
-                val: 10
-            },
-            {
-                val: 8
-            }
-        ];
-    
-        ctrl.minValue = Utils.getMinValueFromArrayOfObjects(object, 'val');
-        ctrl.maxValue = Utils.getMaxValueFromArrayOfObjects(object, 'val');
-    };
-}
+        let ctrl = this;
+        
+        // Called when the component is instantiated
+        ctrl.$onInit = () => {
+            ctrl.resolvedMessage = ctrl.helloWorld.message;
+            ctrl.componentMessage = 'Hello';
+            
+            let object = [
+                {
+                    val: 2
+                },
+                {
+                    val: 7
+                },
+                {
+                    val: 1
+                },
+                {
+                    val: 10
+                },
+                {
+                    val: 8
+                }
+            ];
+            
+            ctrl.minValue = Utils.getMinValueFromArrayOfObjects(object, 'val');
+            ctrl.maxValue = Utils.getMaxValueFromArrayOfObjects(object, 'val');
+        }
+    },
+    controllerAs: 'Homepage',
+    template: <string>require('./homepage.html')
+};

@@ -18,6 +18,8 @@ module.exports = function karmaConfig(config) {
     files: [
       'node_modules/angular/angular.js',
       'node_modules/angular-mocks/angular-mocks.js',
+      'node_modules/angular-material/angular-material.js',
+      'node_modules/@uirouter/angularjs/release/angular-ui-router.js',
       '**/*.spec.ts'
     ],
     preprocessors: {

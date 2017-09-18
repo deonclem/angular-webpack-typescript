@@ -1,4 +1,5 @@
-import {TransitionService} from "../../../node_modules/ui-router-core/lib/index";
+import { TransitionService } from '@uirouter/core/lib/transition/transitionService';
+
 
 export interface CustomRootScope extends ng.IRootScopeService {
     changingState: boolean
@@ -12,5 +13,3 @@ export function run($transitions: TransitionService, $rootScope: CustomRootScope
         trans.promise.finally(() => $rootScope.changingState = false);
     });
 }
-
-export default run;

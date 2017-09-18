@@ -5,7 +5,7 @@ import * as angular from 'angular';
  */
 import 'angular';
 import 'angular-material';
-import 'angular-ui-router';
+import '@uirouter/angularjs';
 // Must use require for the locale - Update to your own
 require('angular-i18n/angular-locale_fr-fr.js');
 

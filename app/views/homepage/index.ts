@@ -1,5 +1,3 @@
-import * as angular from 'angular';
-import 'angular-ui-router';
 
 /**
  * Homepage View
@@ -8,11 +6,11 @@ import 'angular-ui-router';
 /**
  * Internal deps
  */
-import {HomepageComponent} from './homepage'
 import {config as HomepageRouting} from './HomepageRouting'
+import {HomepageComponent} from './homepage'
 import {HelloWorldComponent} from './components/hello-world/helloWorld'
 
 angular.module('app.homepage', ['ui.router'])
     .config(HomepageRouting)
-    .component('homepage', new HomepageComponent())
-    .component('helloWorld', new HelloWorldComponent());
+    .component('homepage', HomepageComponent)
+    .component('helloWorld', HelloWorldComponent);
