@@ -1,4 +1,4 @@
-Angular 1.5 - Typescript - Webpack starter pack
+Angular 1.6 - Typescript - Webpack starter pack
 ===============================================
 
 This repository contains a basic app running using Angular 1.6.6, Typescript 2.5.2 and Webpack 3.6.0
@@ -19,3 +19,4 @@ This also uses [angular-material](https://github.com/angular/material) 1.1.5 and
 
 * Add Lazy loading
 * Hot reloading of CSS
+* Add E2E tests
