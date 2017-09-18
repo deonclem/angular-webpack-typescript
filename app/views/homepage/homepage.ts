@@ -37,6 +37,10 @@ export const HomepageComponent: ng.IComponentOptions = {
             
             ctrl.minValue = Utils.getMinValueFromArrayOfObjects(object, 'val');
             ctrl.maxValue = Utils.getMaxValueFromArrayOfObjects(object, 'val');
+            
+            ctrl.clickMeCallback = (message) => {
+                console.log(message);
+            };
         }
     },
     controllerAs: 'Homepage',
