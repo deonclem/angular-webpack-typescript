@@ -1,3 +1,9 @@
+## [NO LONGER SUPPORTED] - You can still use/clone/fork this repo but as I've switched to ngx it won't be updated anymore.
+
+
+
+
+
 Angular 1.6 - Typescript - Webpack starter pack
 ===============================================
 
@@ -14,9 +20,3 @@ This repository contains a basic app running using Angular 1.6.6, Typescript 2.5
 ## Misc
 
 This also uses [angular-material](https://github.com/angular/material) 1.1.5 and [angular-ui-router](https://github.com/angular-ui/ui-router) 1.0.6
-
-## Next steps
-
-* Add Lazy loading
-* Hot reloading of CSS
-* Add E2E tests
